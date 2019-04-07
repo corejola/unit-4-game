@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Collectors</title>
+    <title>Infinity Stone Collectors</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type=text/css href="assets/css/style.css">
@@ -15,41 +15,51 @@
 
 <body>
     <div>
-        <h1>Crystal Collectors</h1>
+        <h1>Infinity Stone Collectors</h1>
         <h3>Rules</h3>
         <p>TBD</p>
     </div>
 
-    <div id="targetNumber"></div>
+    <div>Target Number: <span id="targetNumber"></span></div>
     <div>
         <h4>Current Score</h4>
         <div>Wins: <span id="wins-counter"></span> </div>
         <div>Losses: <span id="losses-counter"></span> </div>
 
     </div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center" id="mindGem">
+                    <img src="assets/images/MindGem.PNG" width="150px" height="150px" class="rounded" alt="...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center" id="soulGem">
+                    <img src="assets/images/SoulGem.PNG" width="150px" height="150px" class="rounded" alt="...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center" id="spaceGem">
+                    <img src="assets/images/SpaceGem.PNG" width="150px" height="150px" class="rounded" alt="...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center" id="timeGem">
+                    <img src="assets/images/TimeGem.PNG" width="150px" height="150px" class="rounded" alt="...">
+                </div>
 
-    <div class="text-center" id="mindGem">
-        <img src="assets/images/MindGem.PNG" width="150px" height="150px" class="rounded" alt="...">
+            </div>
+        </div>
     </div>
 
-    <div class="text-center" id="soulGem">
-        <img src="assets/images/SoulGem.PNG" width="150px" height="150px" class="rounded" alt="...">
-    </div>
+    <br><br>
 
-    <div class="text-center" id="spaceGem">
-        <img src="assets/images/SpaceGem.PNG" width="150px" height="150px" class="rounded" alt="...">
-    </div>
-
-    <div class="text-center" id="timeGem">
-        <img src="assets/images/TimeGem.PNG" width="150px" height="150px" class="rounded" alt="...">
-    </div>
-
-    <div>Your Total Score is</div>
-    <div id="points"><span></span></div>
+    <div>Current Points: <span id="points"></span></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/game.js"></script>
-
 
 </body>
 
