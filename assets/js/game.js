@@ -28,6 +28,7 @@ $(document).ready(function () {
     $('#targetNumber').html(targetNum);
     $('#wins-counter').html(wins);
     $('#losses-counter').html(losses);
+
     function gameStart() {
 
         //      Target number generated (random) = ~19 - 120
