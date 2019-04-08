@@ -3,23 +3,30 @@ $(document).ready(function () {
 
     // Game in progress = True
     //Initial Conditions
-    var gameInProgress = true;
-    // var crystals = [image1];/
+    // var gameInProgress = true;
     // Initial Conditions:
     //Target Number = 0
-    var targetNum;
+    var targetNum = null;
     // Player's total score = 0
     var playerScore = 0;
     //      Wins = 0
     var wins = 0;
     //      Losses = 0
-    var losses = 0;
 
-    //infinity stone random number generator
-    var mindGem = Math.floor(Math.random() * (13 - 1)) + 1;
-    var soulGem = Math.floor(Math.random() * (13 - 1)) + 1;
-    var spaceGem = Math.floor(Math.random() * (13 - 1)) + 1;
-    var timeGem = Math.floor(Math.random() * (13 - 1)) + 1;
+    var losses = 0;
+    var mindGem = 0;
+    var soulGem = 0;
+    var spaceGem = 0;
+    var timeGem = 0;
+
+    function stoneReset() {
+
+        //infinity stone random number generator
+        mindGem = Math.floor(Math.random() * (13 - 1)) + 1;
+        soulGem = Math.floor(Math.random() * (13 - 1)) + 1;
+        spaceGem = Math.floor(Math.random() * (13 - 1)) + 1;
+        timeGem = Math.floor(Math.random() * (13 - 1)) + 1;
+    }
 
     // console.log(mindGem)
     // console.log(soulGem)
@@ -38,6 +45,8 @@ $(document).ready(function () {
         targetNum = Math.floor(Math.random() * (121 - 19)) + 19;
         console.log(targetNum);
 
+        stoneReset();
+
         //initial conditions tied to HTML elements
         $('#targetNumber').html(targetNum);
         $('#wins-counter').html(wins);
@@ -50,22 +59,32 @@ $(document).ready(function () {
         //      Target number generated (random) = ~19 - 120
 
     }
-    gameStart();
 
+    // if players points === target number
+    // wins++ to HTML Score element, game in progress = false, 
+    // if players points > target number, 
+    //loss ++ to HTML Score element, game in progress = false,
 
-    // Crystal Numbers #1-4 ( ~1 - 12) per crystal (using for loop
-    // var crystal = [];
-    // value between 1 - 12
-    // for (var i = 0; i < var.length; i++) {
-    // 	    var Crystal =  Math.floor(math.random() * (13 - 1)) +1;
-    // 	    var image = $('<img>)
-    // 	    Image.attr(crystal[i])
-    // 	    $('#crystal').apend(image)?
-    //      .push(crystal);?
+    function inGame() {
 
+        if (playerScore === targetNum) {
+            console.log("win");
+            // wins++;
+            // $('#wins-counter').html(wins);
+            // gameStart();
+        }
+        if (playerScore > targetNum) {
+            // losses++;
+            console.log("lose");
+            // $('#losses-counter').html(losses);
+            // gameStart();
+        };
+
+    };
+
+    // Crystal Numbers #1-4 ( ~1 - 12) per crystal using for loop?
 
     //return all player inputs
-
 
     // player clicks on 1 of 4 crystals, 
     // crystals random value determined at begining of round
@@ -93,24 +112,10 @@ $(document).ready(function () {
         $('#points').html(playerScore);
     });
 
-    console.log("Player Points Initial Condition " + playerScore);
 
-    // if players points === target number
-    // wins++ to HTML Score element, game in progress = false, 
-    // if players points > target number, 
-    //loss ++ to HTML Score element, game in progress = false,
+    gameStart();
 
-    if (playerScore === targetNum) {
-        wins++;
-        $('#wins-counter').html(wins++);
-        gameInProgress = false;
-    }
-    else if (playerScore > targetNum) {
-        losses++;
-        alert("you lose")
-        $('#losses-counter').html(losses++);
-
-    }
+    inGame();
 
     // function Game Start ()
     // gameStart()
