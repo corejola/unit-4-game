@@ -32,7 +32,7 @@ $(document).ready(function () {
             var randomValue = Math.floor(Math.random() * (12)) + 1;
             var stoneNumber = $('<img>');
             stoneNumber.attr({
-                "class": 'stone',
+                "class": 'stone border',
                 "data-random": randomValue,
                 "src": stones[i],
             });
