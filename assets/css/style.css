@@ -1,7 +1,13 @@
 body {
-    background-image: url('images/ultra-hd-space-walpaper.jpeg');
+    color:black;
+}
+
+.title { 
+    font-family: Trattatello, fantasy;
+    font-size: 45px;
 }
 .points {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px
+    font-size: 30px;
+    color: white;
 }

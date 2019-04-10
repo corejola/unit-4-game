@@ -17,7 +17,7 @@
 
     <div class="container-fluid">
         <div class="jumbotron">
-            <h1 class="display-4">Infinity Stone Collectors</h1>
+            <h1 class="display-4 title">Infinity Stone Collectors</h1>
             <h3>Rules</h3>
             <p class="lead">Yuu will be given a random number at the start of the game.</p>
             <p class="lead">There are four Infinity Stones below. By clicking on an Infinity Stone, you will add a
@@ -31,20 +31,22 @@
             </p>
         </div>
 
-        <div class="points d-flex justify-content-center">Target Number: <span id="targetNumber"></span></div>
-        <div>
-            <h4 class="points d-flex justify-content-center">Current Score</h4>
-            <div class="points d-flex justify-content-center">Wins: <span id="wins-counter"></span> </div>
-            <div class="points d-flex justify-content-center">Losses: <span id="losses-counter"></span> </div>
+        <div class="points d-flex flex-row bd-highlight mb-3">Target Number: <span id="targetNumber"></span>
         </div>
-
+        <div>
+            <h4 class="points d-flex flex-row bd-highlight mb-3">Current Score:</h4>
+            <div class="points d-flex flex-row bd-highlight mb-3">Wins: <span id="wins-counter"></span> </div>
+            <div class="points d-flex flex-row bd-highlight mb-3">Losses: <span id="losses-counter"></span> </div>
+        </div>
+        <div>
+            <div class="points d-flex flex-row bd-highlight mb-3">Stone Points: <span id="points"></span></div>
+        </div>
         <br>
 
         <div class="infinityStone shadow-lg p-3 mb-5 bg-white rounded d-flex justify-content-center"></div>
 
         <br>
 
-        <div class="points d-flex justify-content-center">Stone Points: <span id="points"></span></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
